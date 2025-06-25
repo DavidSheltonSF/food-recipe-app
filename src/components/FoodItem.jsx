@@ -4,6 +4,7 @@ export default function FoodItem({foodItem}) {
       <article>
         <img src={foodItem.image} alt="" />
         <h1>{foodItem.title}</h1>
+        <button>View Recipe</button>
       </article>
     </>
   );
