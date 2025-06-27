@@ -8,8 +8,7 @@
   color: rgb(44, 43, 43);
 }
 
-
-.recepiName{
+.recepiName {
   font-size: 24px;
   margin-bottom: 10px;
 }
@@ -19,4 +18,24 @@
   height: auto;
   border-radius: 5px;
   margin-bottom: 10px;
+}
+
+.recipeDetails {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  flex-direction: row;
+  width: 100%;
+  height: 100px;
+}
+
+.recipeInstructions {
+  padding: 10px;
+  color: gray;
+}
+
+.recipeInstructions li {
+  margin: 10px 0px;
 }

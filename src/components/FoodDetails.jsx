@@ -29,8 +29,12 @@ export default function FoodDetails({ foodId }) {
     <div>
       <article className={styles.recipeCard}>
         <h1 className={styles.recepiName}>{food.title}</h1>
-        <img className={styles.recipeImage} src={food.image} alt={food.title || 'Food image'} />
-        <div>
+        <img
+          className={styles.recipeImage}
+          src={food.image}
+          alt={food.title || 'Food image'}
+        />
+        <div className={styles.recipeDetails}>
           <span>
             <strong>⏲️ {food.readyInMinutes} Minutes</strong>
             <span>
@@ -46,15 +50,15 @@ export default function FoodDetails({ foodId }) {
           <span>💲️ {food.pricePerServing}</span>
         </div>
         <h2>Instructions</h2>
-        <div>
+        <div className={styles.recipeInstructions}>
           {isLoading ? (
             <p>Loading...</p>
           ) : (
-            <ul>
+            <ol>
               {food.analyzedInstructions[0].steps.map((step) => (
                 <li key={step.number}>{step.step}</li>
               ))}
-            </ul>
+            </ol>
           )}
         </div>
       </article>
